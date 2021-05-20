@@ -1,0 +1,33 @@
+<div class="clr-row toolbar" style="padding: 12px; margin:0">
+    <span>
+        <clr-icon shape="search"></clr-icon>
+        <input #filterInput clrInput type="text" placeholder="Filter images..." style="margin-top: 0;" (keyup)="filter$.next(filterInput.value)" />
+    </span>
+    <span>
+        <button type="button" class="btn btn-icon btn-primary" aria-label="settings" (click)="fileInput.click()">
+            <clr-icon shape="folder-open"></clr-icon>
+            Open
+        </button>
+        <input #fileInput multiple type="file" style="display:none" accept="image/*" (change)="addFiles(fileInput)" />
+    </span>
+</div>
+<div class="clr-row image-container">
+    <div class="clr-col-lg-2 clr-col-4" *ngFor="let img of images$ | async">
+        <a href="javascript:void(0)" class="card clickable" (click)="cb.click()" [class.active]="selected.includes(img)">
+            <div class="card-img">
+                <img [attr.src]="img.url" />
+            </div>
+            <div class="card-block">
+                <p class="card-text">
+                    <clr-checkbox-wrapper>
+                        <input #cb type="checkbox" clrCheckbox name="options" (change)="select(img, cb.checked)" [checked]="selected.includes(img)"/>
+                        <label>{{img.name}}</label>
+                      </clr-checkbox-wrapper>         
+                    <button class="btn btn-icon" style="border:none;margin-right:0">
+                        <clr-icon shape="trash"></clr-icon>           
+                    </button>
+                </p>
+            </div>
+        </a>
+    </div>
+</div>

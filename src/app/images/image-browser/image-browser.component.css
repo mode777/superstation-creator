@@ -1,0 +1,43 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img img {
+    height:180px;
+}
+
+.header {
+    background-color: #eee;
+    color: black;
+}
+
+.image-container {
+    margin: 0;
+    padding: 6px;
+    overflow: auto;
+}
+
+header .search-box input[type=text], header .search input[type=text], .header .search-box input[type=text], .header .search input[type=text] {
+    color: black;
+}
+
+.card-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card.clickable.active {
+    box-shadow: 0 0.15rem 0 0 #179bd3;
+    box-shadow: 0 .15rem 0 0 var(--clr-card-clickable-box-shadow-color);
+    border-width: .05rem;
+    border-width: var(--clr-card-border-width, 0.05rem);
+    border-style: solid;
+    border-color: #179bd3;
+    border-color: var(--clr-card-clickable-border-color, #179bd3);
+    cursor: pointer;
+    text-decoration: none;
+    transform: translateY(-.1rem);
+    transition: border .2s ease,transform .2s ease;
+}

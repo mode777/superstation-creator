@@ -1,0 +1,16 @@
+.sst-navbox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.clr-treenode-link {
+    display: flex;
+    align-items: center;
+}
+
+.sst-tab-header {
+    padding-left: 6px;;
+    padding-right: 6px;
+}

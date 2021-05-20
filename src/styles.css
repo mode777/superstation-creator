@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+.sst-navbox .clr-form-control {
+    margin-top: -3px;
+    padding: 6px 0px;
+}
+
+/* .sst-tab-content {
+    position: absolute;
+    top: 96px;
+    bottom: 0;
+    overflow: auto;
+    box-shadow: inset 0px 1px 3px rgb(0 0 64 / 25%);
+} */
+
+.nav .nav-item {
+    margin-right: 0;
+}
+
+.nav .nav-link.btn {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar .clr-form-control, .image-container .clr-form-control {
+    display: inline;
+} 
+
+img {
+    image-rendering: pixelated;
+}
