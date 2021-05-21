@@ -2,6 +2,7 @@
 .sst-navbox .clr-form-control {
     margin-top: -3px;
     padding: 6px 0px;
+    width:0;
 }
 
 /* .sst-tab-content {

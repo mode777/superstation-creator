@@ -12,20 +12,14 @@
     </span>
 </div>
 <div class="clr-row image-container">
-    <div class="clr-col-lg-2 clr-col-4" *ngFor="let img of images$ | async">
-        <a href="javascript:void(0)" class="card clickable" (click)="cb.click()" [class.active]="selected.includes(img)">
+    <div class="image-card" *ngFor="let img of images$ | async">
+        <a href="javascript:void(0)" class="card clickable" (click)="select(img, !selected.includes(img))" [class.active]="selected.includes(img)">
             <div class="card-img">
                 <img [attr.src]="img.url" />
             </div>
             <div class="card-block">
                 <p class="card-text">
-                    <clr-checkbox-wrapper>
-                        <input #cb type="checkbox" clrCheckbox name="options" (change)="select(img, cb.checked)" [checked]="selected.includes(img)"/>
-                        <label>{{img.name}}</label>
-                      </clr-checkbox-wrapper>         
-                    <button class="btn btn-icon" style="border:none;margin-right:0">
-                        <clr-icon shape="trash"></clr-icon>           
-                    </button>
+                    {{img.name}}
                 </p>
             </div>
         </a>

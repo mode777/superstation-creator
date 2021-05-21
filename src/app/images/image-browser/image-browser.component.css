@@ -4,7 +4,7 @@
 }
 
 .card-img img {
-    height:180px;
+    height:100px;
 }
 
 .header {
@@ -23,9 +23,7 @@ header .search-box input[type=text], header .search input[type=text], .header .s
 }
 
 .card-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+overflow: hidden;
 }
 
 .card.clickable.active {
@@ -40,4 +38,10 @@ header .search-box input[type=text], header .search input[type=text], .header .s
     text-decoration: none;
     transform: translateY(-.1rem);
     transition: border .2s ease,transform .2s ease;
+}
+
+.image-card {
+    flex: 0 0 120px;
+    max-width: 120px;
+    margin-right: 12px;
 }
